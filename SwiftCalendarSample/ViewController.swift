@@ -11,31 +11,14 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var calendarCollectionView: UICollectionView!
+    // 1月分のUICollectionViewDelegateとUICollectionViewDatasource
+    // ViewControllerで持つ
     var monthCalendarSources:[MonthCalendarSource] = []
-    let displayMonths:[(year:Int, month:Int)] = [(2018,1),
-                                                 (2018,2),
-                                                 (2018,3),
-                                                 (2018,4),
-                                                 (2018,5),
-                                                 (2018,6),
-                                                 (2018,7),
-                                                 (2018,8),
-                                                 (2018,9),
-                                                 (2018,10),
-                                                 (2018,11),
-                                                 (2018,12),
-                                                 (2019,1),
-                                                 (2019,2),
-                                                 (2019,3),
-                                                 (2019,4),
-                                                 (2019,5),
-                                                 (2019,6),
-                                                 (2019,7),
-                                                 (2019,8),
-                                                 (2019,9),
-                                                 (2019,10),
-                                                 (2019,11),
-                                                 (2019,12)]
+    // 表示する月
+    let displayMonths:[(year:Int, month:Int)] = [(2018,1),(2018,2),(2018,3),(2018,4),(2018,5),(2018,6),
+                                                 (2018,7),(2018,8),(2018,9),(2018,10),(2018,11),(2018,12),
+                                                 (2019,1),(2019,2),(2019,3),(2019,4),(2019,5),(2019,6),
+                                                 (2019,7),(2019,8),(2019,9),(2019,10),(2019,11),(2019,12)]
     
     override func viewDidLoad() {
         super.viewDidLoad()
